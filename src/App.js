@@ -19,14 +19,16 @@ class App extends Component {
       text: e.target.value,
     })
   }
-  
-  addTask = () => {
+
+  addTask = (e) => {
+    e.preventDefault();
     const tasks = [...this.state.tasks];
     const newTask = {text: this.state.text, id: this.state.tasks.length + 1};
     tasks.push(newTask);
     this.setState({
       ...this.state,
       tasks: tasks,
+      text: '',
     });
   }
 
@@ -41,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Form click={this.addTask} change={this.inputChangeHandler} btnText="Add"/>
+        <Form value={this.state.text} click={this.addTask} change={this.inputChangeHandler} btnText="Add"/>
         <ListItem remove={this.removeTask} tasks={this.state.tasks}/>
       </Container>
     );

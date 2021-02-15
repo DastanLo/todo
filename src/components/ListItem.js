@@ -5,7 +5,7 @@ const ListItem = (props) => {
   return (
     <ListGroup className="mt-5">
       {
-        props.tasks.reverse().map((task, index) => {
+        props.tasks.map((task, index) => {
           return <ListGroupItem
             key={task.id}
             className="d-flex justify-content-between align-items-center mb-2"

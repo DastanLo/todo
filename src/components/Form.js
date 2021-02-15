@@ -3,12 +3,14 @@ import {Input, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
 
 const Form = (props) => {
   return (
-    <InputGroup className="mt-5">
-      <Input onChange={props.change}/>
-      <InputGroupAddon style={{cursor: 'pointer'}} onClick={props.click} addonType="append">
-        <InputGroupText>{props.btnText}</InputGroupText>
-      </InputGroupAddon>
-    </InputGroup>
+    <form onSubmit={props.click}>
+      <InputGroup className="mt-5">
+        <Input value={props.value} onChange={props.change}/>
+        <InputGroupAddon style={{cursor: 'pointer'}}  addonType="append">
+          <button type="submit">{props.btnText}</button>
+        </InputGroupAddon>
+      </InputGroup>
+    </form>
   );
 };
 
