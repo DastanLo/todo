@@ -9,6 +9,9 @@ class App extends Component {
       {text: 'buy bread', id: 1},
       {text: 'go to school', id: 2},
       {text: 'finish homework', id: 3},
+      {text: 'finish homework', id: 3},
+      {text: 'finish homework', id: 3},
+      {text: 'finish homework', id: 3},
       ],
     text: '',
   }
